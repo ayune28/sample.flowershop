@@ -1,0 +1,569 @@
+@charset "UTF-8";
+body {
+  width: 100%;
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 375px;
+}
+
+header {
+  background-image: url("hassan-ouajbir-bgLpqbC9H0o-unsplash.jpg");
+  background-repeat: no-repeat;
+  height: 520px;
+  background-size: cover;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .header_logo {
+  color: white;
+  font-size: 2.5rem;
+  padding-left: 2%;
+  padding-top: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .main {
+  color: white;
+  font-size: 4rem;
+}
+
+header p {
+  color: white;
+  font-size: 0.4rem;
+}
+
+header .main_box {
+  text-align: center;
+  margin-top: 100px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .main_logo {
+  text-align: center;
+  margin-top: 10%;
+}
+
+header #hambuger {
+  opacity: 0;
+  position: fixed;
+}
+
+header .burger {
+  position: fixed;
+  top: 1.5rem;
+  width: 1.8rem;
+  height: 1.5rem;
+  right: 1rem;
+  z-index: 3;
+}
+
+header .burger::before,
+header .burger::after,
+header .bar {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 0.1rem;
+  background-color: white;
+  content: "";
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header .burger::before {
+  top: 0;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+header .burger::after {
+  bottom: 0;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+header .bar {
+  top: 50%;
+}
+
+header #menu {
+  position: fixed;
+  top: -230px;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  text-align: center;
+}
+
+header #menu a {
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.336);
+  text-decoration: none;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.2s,-webkit-transform 0.5s;
+  transition: all 0.2s,-webkit-transform 0.5s;
+  transition: all 0.2s,transform 0.5s;
+  transition: all 0.2s,transform 0.5s,-webkit-transform 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+          transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+header #menu a:hover {
+  cursor: pointer;
+  background-color: rgba(245, 245, 245, 0.685);
+}
+
+header #hambuger:checked + label .burger::before,
+header #hambuger:checked + label .burger::after {
+  width: 110%;
+}
+
+header #hambuger:checked + label .burger::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header #hambuger:checked + label .burger::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+header #hambuger:checked + label .bar {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+header #hambuger:checked ~ #menu a {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+main h2 {
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 100;
+  margin-bottom: 1px;
+}
+
+main h3 {
+  text-align: center;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+main p {
+  font-size: 0.5rem;
+  color: black;
+  top: 0;
+  left: 0;
+}
+
+main img {
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .concept {
+  text-align: center;
+}
+
+main hr {
+  color: black;
+  width: 50px;
+}
+
+main .works {
+  position: relative;
+}
+
+main .works img {
+  width: 100%;
+  height: auto;
+  padding-left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .works p {
+  text-align: right;
+  position: absolute;
+  top: 50px;
+  right: 1px;
+}
+
+main .gift img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-right: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .decoration {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+main .wedding {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+main .wedding img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .wedding h2 {
+  position: absolute;
+  top: 340px;
+  left: 10px;
+}
+
+main .wedding P {
+  margin-left: 2px;
+  margin-top: 0;
+}
+
+main .for {
+  margin-bottom: 30px;
+}
+
+main .for img {
+  width: 90%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .for p {
+  text-align: right;
+  margin-right: 2px;
+}
+
+main .shiyu {
+  margin-bottom: 30px;
+}
+
+main .shiyu p {
+  text-align: center;
+  margin-top: 0;
+}
+
+main .mao {
+  margin-bottom: 30px;
+}
+
+main .mao img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .mao p {
+  text-align: center;
+  margin-top: 0;
+}
+
+main .omichan {
+  margin-bottom: 30px;
+}
+
+main .omichan img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .omichan p {
+  text-align: center;
+  margin-top: 0;
+}
+
+main .access1 img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+main .access1 .post3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .access1 .post4 {
+  margin-left: 10px;
+}
+
+main .access1 .access {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 50px;
+  background-color: rgba(163, 168, 170, 0.856);
+}
+
+main .access1 .access .post1 {
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+main .access1 .access .post {
+  font-weight: 200;
+}
+
+main .access1 .access h2 {
+  margin-top: 0;
+  padding-top: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .access1 .access .mail.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 2px;
+  margin-top: 4px;
+  width: 15px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+
+main .access1 .access .mail.icon:before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: -4px;
+  width: 1px;
+  height: 10px;
+  background-color: currentColor;
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-transform: rotate(-54deg);
+  transform: rotate(-54deg);
+}
+
+main .access1 .access .mail.icon:after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: -4px;
+  width: 1px;
+  height: 10px;
+  background-color: currentColor;
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+
+main .access1 .access .contact {
+  border: 1px solid;
+  border-radius: 8px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .access1 .access .contact .contact1 {
+  text-align: center;
+  width: 100px;
+  padding-left: 30%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .access1 .access .contact .mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .access1 .access .contact a {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+main .access1 .access .contact p {
+  text-align: center;
+}
+
+main .access1 .access .contact .contactpp {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 376px) {
+  header {
+    height: 500px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0 100%;
+       object-position: 0 100%;
+  }
+  main h2 {
+    font-size: 40px;
+  }
+  main img {
+    width: 500px;
+    height: auto;
+  }
+  main .concept_main {
+    text-align: center;
+  }
+  main .work_main {
+    text-align: center;
+  }
+  main .work_main p {
+    text-align: center;
+  }
+  main .work_main img {
+    margin-top: 50px;
+    width: 90%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 0;
+  }
+  main .gift {
+    text-align: center;
+  }
+  main .gift p {
+    text-align: center;
+  }
+  main .gift img {
+    width: 90%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 0;
+  }
+  main .wedding {
+    margin: 0;
+    text-align: center;
+  }
+  main .wedding h2 {
+    position: static;
+    margin: 0;
+  }
+  main .wedding img {
+    width: 90%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 0;
+  }
+  main .for {
+    text-align: center;
+  }
+  main .for h2 {
+    margin: 0;
+  }
+  main .for p {
+    text-align: center;
+  }
+  main .for img {
+    width: 90%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 0;
+  }
+  main .member {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .member img {
+    width: 300px;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .member .shiyu {
+    width: 300px;
+  }
+  main .member .mao {
+    width: 300px;
+  }
+  main .member .omichan {
+    width: 300px;
+  }
+  main .access1 img {
+    width: 100%;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .access1 .post {
+    text-align: center;
+  }
+  main .access1 .post3 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .access1 .contactpp {
+    text-align: center;
+  }
+}
